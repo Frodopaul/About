@@ -1,0 +1,186 @@
+E- Commerce Website Using 
+DATE:                                                     React JS
+Aim: 
+To create an E-Commerce website using React JS. 
+CODE: 
+import React, { useState } from 'react';
+import './App.css'; const App = () => {
+const [cart, setCart] = useState([]);
+const products = [
+{ id: 1, name: 'Product 1', price: 10, image: 
+'minervaseries.png' },
+{ id: 2, name: 'Product 2', price: 20, image: 
+'minervaseries.png' },
+{ id: 3, name: 'Product 3', price: 30, image: 
+'minervaseries.png' }   ];
+const addToCart = (product) => {
+setCart([...cart, { ...product }]);
+};
+return (
+<div className="App">
+<h2>Products</h2>
+<ul>
+{products.map((product) => (
+<li key={product.id}>
+<img src={product.image} alt={product.name} width="50" height="50" />
+{product.name} - ${product.price}
+<button onClick={() => addToCart(product)}>Add to Cart</button>
+</li>
+))}
+</ul>
+1213
+<h2>Shopping Cart</h2>
+<ul>
+{cart.map((item, index) => (
+<li key={index}>
+<img src={item.image} alt={item.name} width="50" height="50" />
+{item.name} - ${item.price}
+</li>
+))}
+</ul>
+</div>
+); };
+export default App;
+
+    Website Using Node JS
+DATE: 
+Aim: 
+To create a Website using Node JS 
+Code: 
+import React, { useState } from 'react'; const App = () => { const [tasks, setTasks] = useState([]);   const [task, setTask] = useState('');   const addTask = () => {     if (task) {      setTasks([...tasks, { title: task, completed: false }]);      setTask('');
+} }; const toggleComplete = (index) => { const newTasks = tasks.slice(); newTasks[index].completed = !newTasks[index].completed; setTasks(newTasks);
+};  const deleteTask = (index) 
+=> {    const newTasks = 
+tasks.slice();
+newTasks.splice(index, 1);
+setTasks(newTasks);
+};
+return (
+<div>
+<h1>To-Do List</h1>
+<input
+type="text"
+value={task}
+onChange={(e) => 
+setTask(e.target.value)}
+placeholder="New Task"
+/>
+<button onClick={addTask}>Add Task</button>
+<ul>
+{tasks.map((t, index) => ( <li key={index}>
+1415
+{t.title} - {t.completed ? 'Done' : 'Pending'} <button onClick={() => toggleComplete(index)}>Toggle 
+Complete</button>
+<button onClick={() => deleteTask(index)}>Delete</button>
+</li>
+))}
+</ul>
+</div>
+); }; export 
+default App;
+
+
+Bio-Data form using HTML and           
+DATE:      
+Angular JS 
+Aim: 
+To create a form which takes bio-data from user using HTML and JS. 
+Code: 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Student Bio Data Form</title> 
+</head> 
+<body> 
+<h2>Login Form</h2> 
+<div id="bioDataForm" style="display: block;"> 
+<h2>Student Bio Data Form</h2> 
+<form id="studentForm"> 
+<label for="name">Name:</label> 
+<input type="text" id="name" required><br> 
+<label for="age">Age:</label> 
+<input type="text" id="age" required><br> 
+<label for="course">Course:</label> 
+<input type="text" id="course" required><br> 
+<button type="button" onclick="displayBioData()">Submit BioData</button> 
+</form> 
+<div id="bioData"></div> 
+</div> 
+10Successfully created form to take bio-data from user using Angular JS. 
+11
+<script> 
+function displayBioData() { 
+var name = document.getElementById("name").value; 
+var age = document.getElementById("age").value;        var course = document.getElementById("course").value; 
+var bioData = "Name: " + name + "<br>Age: " + age + 
+"<br>Course: " + course; 
+document.getElementById("bioData").innerHTML = "<h2>Student Bio Data</h2>" + bioData; 
+} 
+</script> 
+</body> 
+</html>
+
+
+Login Validation Form Using HTML            
+DATE:                                                and JS 
+Aim: 
+To create an HTML form with login validation using JS. 
+Code: 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Simple Login Form</title> 
+</head> 
+<body> 
+<h2>Login Form</h2> 
+<form id="loginForm"> 
+<label for="username">Username:</label>
+<input type="text" id="username" required><br> 
+<label for="password">Password (Alphanumeric):</label> 
+<input type="password" id="password" required> 
+<div id="passwordMessage" style="color: red;"></div><br> 
+<button type="button" onclick="login()">Login</button> 
+</form> 
+<div id="message"></div> 
+<script>  
+function login() { 
+var username = document.getElementById("username").value; var password = document.getElementById("password").value;        var passwordMessage = 
+document.getElementById("passwordMessage"); if (!/^[a-zA-Z0-9]+$/.test(password)) { 9
+passwordMessage.innerHTML = "Password must be 
+alphanumeric.";        } else { 
+passwordMessage.innerHTML = ""; 
+} 
+if (username === "your" && password === "password1") { document.getElementById("message").innerHTML = "Login successful!";        } else { 
+document.getElementById("message").innerHTML = "Invalid username or password. Please try again."; 
+} 
+} 
+</script> 
+</body> 
+</html>
+
+Basic HTML Tags
+EX NO:  1
+DATE: 
+Aim:  
+To write an HTML code implementing Basic HTML tags. 
+Code: 
+<!DOCTYPE html>
+<html> <head>
+<title>HTML Tags Demo</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<p>This is an example paragraph.</p>
+<br>
+<hr>
+<!-- This is a comment -->
+<form>
+<input type="text" placeholder="Enter text"> <textarea placeholder="Type here..."></textarea> <button type="submit">Submit</button>
+</form>
+<img src="image.jpg" alt="Example Image">
+<audio controls>
+<source src="audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element. </audio>
+<a href="#">Click Here</a>
+</body>
+</html>
